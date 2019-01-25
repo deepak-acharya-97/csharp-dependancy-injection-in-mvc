@@ -1,8 +1,10 @@
-﻿@{
+﻿@using DIMVCPracticeUpdated.Models;
+@{
     ViewBag.Title = "Contact";
+    Credential credential = ViewBag.Message as Credential;
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h3>@credential.RegisteredEmailId</h3>
 
 <address>
     One Microsoft Way<br />

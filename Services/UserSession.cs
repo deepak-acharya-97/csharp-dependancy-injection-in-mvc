@@ -9,15 +9,12 @@ namespace DIMVCPracticeUpdated.Services
 {
     public class UserSession: IUserSession
     {
-        private Credential _credential;
+        private static Credential _credential { get; set; } = new Credential();
 
-        public UserSession()
-        {
-            _credential = new Credential();
-        }
         public void SaveCredentialsInSession(Credential credential)
         {
             _credential = credential;
+            var x = 1;
         }
         public Credential GetCredentialsStored()
         {
