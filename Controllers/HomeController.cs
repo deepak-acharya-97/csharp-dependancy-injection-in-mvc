@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIMVCPracticeUpdated.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,11 @@ namespace DIMVCPracticeUpdated.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IUserSession _session;
+        public HomeController(IUserSession session)
+        {
+            _session = session;
+        }
         public ActionResult Index()
         {
             return View();
@@ -15,14 +21,14 @@ namespace DIMVCPracticeUpdated.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = _session.Test();
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = _session.Test();
 
             return View();
         }

@@ -11,7 +11,7 @@ namespace DIMVCPracticeUpdated.Services
     {
         private Credential _credential;
 
-        UserSession()
+        public UserSession()
         {
             _credential = new Credential();
         }

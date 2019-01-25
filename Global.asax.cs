@@ -1,4 +1,5 @@
-﻿using DIMVCPracticeUpdated.Interfaces;
+﻿using DIMVCPracticeUpdated.Controllers;
+using DIMVCPracticeUpdated.Interfaces;
 using DIMVCPracticeUpdated.Services;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,7 @@ namespace DIMVCPracticeUpdated
 
             IUnityContainer container = new UnityContainer();
 
+            container.RegisterType<HomeController>();
             container.RegisterType<IUserSession, UserSession>();
 
             DependencyResolver.SetResolver(new PracticeDependencyResolver(container));
