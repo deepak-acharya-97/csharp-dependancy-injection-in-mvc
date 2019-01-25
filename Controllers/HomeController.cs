@@ -24,15 +24,12 @@ namespace DIMVCPracticeUpdated.Controllers
         public ActionResult About()
         {
             ViewBag.Message = _session.Test();
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            Credential credential = _session.GetCredentialsStored();
             ViewBag.Message = _session.GetCredentialsStored();
-
             return View();
         }
     }

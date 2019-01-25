@@ -14,7 +14,6 @@ namespace DIMVCPracticeUpdated.Services
         public void SaveCredentialsInSession(Credential credential)
         {
             _credential = credential;
-            var x = 1;
         }
         public Credential GetCredentialsStored()
         {
